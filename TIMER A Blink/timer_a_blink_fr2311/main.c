@@ -15,18 +15,18 @@ int main(void){
     //BCSCTL3 = LFXT1S_2;         // Tells MC to use internal crystal
 
     // Clock for first LED
-    TB0CTL = TBSSEL_2 + ID_3 + MC_1;
+    TB0CTL = TBSSEL_2 + ID_3 + MC_1 + TBCLR;
                                 // Sets timer source to SMCLK, internal
-                                // divider to internal clock to 8, and sets
-                                // clock to up mode
+                                // divider to internal clock to 8, sets
+                                // clock to up mode, and clears the clock
     TB0CCR0 = 0x8000;           //
     TB0CCTL0 |= CCIE;           // Capture/compare interrupt enabled
     //PLZ
     // Clock for second LED
-    TB1CTL = TBSSEL_2 + ID_3 + MC_1;
+    TB1CTL = TBSSEL_2 + ID_3 + MC_1 + TBCLR;
                                 // Sets timer source to SMCLK, internal
-                                // divider to internal clock to 8, and sets
-                                // clock to up mode
+                                // divider to internal clock to 8, sets
+                                // clock to up mode, and clears the clock
     TB1CCR0 = 0x2000;           //
     TB1CCTL0 |= CCIE;            // Capture/compare interrupt enabled
 
