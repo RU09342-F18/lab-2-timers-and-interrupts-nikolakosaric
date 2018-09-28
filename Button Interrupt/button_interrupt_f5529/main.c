@@ -8,7 +8,7 @@ int main(void){
 
     P1DIR &= ~BIT1;             // Sets P1.1 in the input direction
     P1REN |= BIT1;              // P1.1 pullup/pulldown resistor enabled
-    P1OUT |= BIT1;             // P1.1 pullup/pulldown configured as
+    P1OUT |= BIT1;              // P1.1 pullup/pulldown configured as
                                 // pull up resistor
 
     P1IE |= BIT1;               // P1.1 interrupt enabled

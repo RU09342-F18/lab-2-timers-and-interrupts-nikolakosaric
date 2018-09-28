@@ -11,7 +11,7 @@ int main(void){
 
 	P1DIR &= ~BIT3;             // Sets P1.3 in the input direction
 	P1REN |= BIT3;              // P1.3 pullup/pulldown resistor enabled
-	P1OUT |= BIT3;             // P1.3 pullup/pulldown configured as
+	P1OUT |= BIT3;              // P1.3 pullup/pulldown configured as
 	                            // pull up resistor
 
 	P1IE |= BIT3;               // P1.3 interrupt enabled
